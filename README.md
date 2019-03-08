@@ -21,7 +21,7 @@ High performance CryptoNote mining stratum with Web-interface written in Golang.
 
 Dependencies:
 
-  * go-1.6
+  * go-1.11.1 (Confirmed working, other may as well. 1.6 will not)
   * Everything required to build Monero
   * Monero >= **v0.14.0.0** (sometimes `master` branch required)
 
@@ -40,7 +40,16 @@ Compile Monero source (with shared libraries option):
 
 Install Golang and required packages:
 
-    sudo apt-get install golang
+    *sudo apt-get install golang
+    *sudo apt-get purge golang*
+    *sudo rm -rf /usr/lib/go-1.6/ /usr/lib/go-1.6/src/ /usr/lib/go-1.6/src/runtime/ /usr/lib/go-1.6/src/runtime/race
+    
+    curl -O https://storage.googleapis.com/golang/go1.11.1.linux-amd64.tar.gz
+
+    sudo tar -C /usr/local -xzf go1.11.1.linux-amd64.tar.gz
+    mkdir -p ~/go; echo "export GOPATH=$HOME/go" >> ~/.bashrc
+    echo "export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin" >> ~/.bashrc
+    source ~/.bashrc
 
 Clone stratum:
 
