@@ -1,9 +1,10 @@
 # monero-stratum
 
+
 High performance CryptoNote mining stratum with Web-interface written in Golang.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/sammy007/monero-stratum)](https://goreportcard.com/report/github.com/sammy007/monero-stratum)
-[![CircleCI](https://circleci.com/gh/sammy007/monero-stratum.svg?style=svg)](https://circleci.com/gh/sammy007/monero-stratum)
+[![Go Report Card](https://goreportcard.com/badge/github.com/SmokinCache/monero-stratum)](https://goreportcard.com/report/github.com/SmokinCache/monero-stratum)
+[![CircleCI](https://circleci.com/gh/SmokinCache/monero-stratum.svg?style=svg)](https://circleci.com/gh/SmokinCache/monero-stratum)
 
 **Stratum feature list:**
 
@@ -15,7 +16,6 @@ High performance CryptoNote mining stratum with Web-interface written in Golang.
 * Concurrent shares processing
 * Beautiful Web-interface
 
-![](https://cdn.pbrd.co/images/jRU3qJj83.png)
 
 ## Installation
 
@@ -23,7 +23,7 @@ Dependencies:
 
   * go-1.11.1 (Confirmed working, other may as well. 1.6 will not)
   * Everything required to build Monero
-  * Monero >= **v0.14.0.0** (sometimes `master` branch required)
+  * Monero >= **v0.14.0.2** (sometimes `master` branch required)
 
 ### Linux
 
@@ -34,16 +34,12 @@ Compile Monero source (with shared libraries option):
     apt-get install git cmake build-essential libssl-dev pkg-config libboost-all-dev
     git clone https://github.com/monero-project/monero.git
     cd monero
-    git checkout tags/v0.14.0.0 -b v0.14.0.0
+    git checkout tags/v0.14.0.2 -b v0.14.0.2
     cmake -DBUILD_SHARED_LIBS=1 .
     make
 
 Install Golang and required packages:
 
-    *sudo apt-get install golang
-    *sudo apt-get purge golang*
-    *sudo rm -rf /usr/lib/go-1.6/ /usr/lib/go-1.6/src/ /usr/lib/go-1.6/src/runtime/ /usr/lib/go-1.6/src/runtime/race
-    
     curl -O https://storage.googleapis.com/golang/go1.11.1.linux-amd64.tar.gz
 
     sudo tar -C /usr/local -xzf go1.11.1.linux-amd64.tar.gz
@@ -53,7 +49,7 @@ Install Golang and required packages:
 
 Clone stratum:
 
-    git clone https://github.com/sammy007/monero-stratum.git
+    git clone https://github.com/SmokinCache/monero-stratum.git
     cd monero-stratum
 
 Build stratum:
@@ -63,13 +59,13 @@ Build stratum:
 
 `MONERO_DIR=/path/to/monero` is optional, not needed if both `monero` and `monero-stratum` is in the same directory like `/opt/src/`. By default make will search for monero libraries in `../monero`. You can just run `cmake .`.
 
-### Mac OS X
+### Mac OS X (I have not tested this build on OS X. I suspect go version installed below will not work)
 
 Compile Monero source:
 
     git clone https://github.com/monero-project/monero.git
     cd monero
-    git checkout tags/v0.14.0.0 -b v0.14.0.0
+    git checkout tags/v0.14.0.2 -b v0.14.0.2
     cmake .
     make
 
@@ -79,7 +75,7 @@ Install Golang and required packages:
 
 Clone stratum:
 
-    git clone https://github.com/sammy007/monero-stratum.git
+    git clone https://github.com/SmokinCache/monero-stratum.git
     cd monero-stratum
 
 Build stratum:
@@ -163,7 +159,10 @@ You must use `anything.WorkerID` as username in your miner. Either disable addre
 
 ### Donations
 
+***Sammy007***
 **XMR**: `47v4BWeUPFrM9YkYRYk2pkS9CubAPEc7BJjNjg4FvF66Y2oVrTAaBjDZhmFzAXgqCNRvBH2gupQ2gNag2FkP983ZMptvUWG`
+***SmokinCache***
+**XMR**: `448AYGS4t2J2j8Cy1EtSb26HAsbx8tBnZ2JFKrAcsLFqiR3z7ejkn24CKTBEZ7R3AyJYSdU1a8SNwP7DpmRcR1kxKjARmo2`
 
 ![](https://cdn.pbrd.co/images/GP5tI1D.png)
 
